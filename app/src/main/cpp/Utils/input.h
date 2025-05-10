@@ -8,15 +8,30 @@
 #include "../BNM-Android/include/BNM/Operators.hpp"
 #include "../BNM-Android/include/BNM/BasicMonoStructures.hpp"
 
-namespace Button{
-    int Secondary = 1;
-    int Primary = 2;
-}
-namespace Controller{
-    int Left = 1;
-    int Right = 2;
-}
+struct InputDevice{
+    BNM::Types::ulong m_DeviceId;
+    BNM::Types::ulong deviceId;
+};
+enum XRNode{
+    LeftEye,
+    RightEye,
+    CenterEye,
+    Head,
+    LeftHand,
+    RightHand,
+    GameController,
+    TrackingReference,
+    HardwareTracker
+};
 
-namespace OVRInput{
-    bool Get(int Button, int Controller);
+enum ButtonType{
+    grip,
+    trigger,
+    primary,
+    secondary,
+    stickPressed
+};
+
+namespace XRInput{
+    bool GetButton(ButtonType type, XRNode xrnode);
 }
