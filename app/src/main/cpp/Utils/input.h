@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../BNM-Android/include/BNM/Loading.hpp"
 #include "../BNM-Android/include/BNM/UserSettings/GlobalSettings.hpp"
 #include "../BNM-Android/include/BNM/Class.hpp"

@@ -21,6 +21,7 @@ add_subdirectory(Dobby)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
         native-lib.cpp
+        Utils/input.cpp
         ${KITTY_MEMORY_SOURCES})
 
 link_libraries(${KEYSTONE_LIB})
@@ -30,7 +31,9 @@ target_include_directories(
         PUBLIC
         ${BNM_INCLUDE_DIRECTORIES}
         KittyMemory
-        Dobby/include)
+        Dobby/include
+        Utils
+        BNMResolve)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}
         android
